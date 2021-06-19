@@ -1,0 +1,80 @@
+/*header css*/
+table th, tr {
+	background-color: #F4F6F9;
+}
+
+table td {
+	background-color: white;
+}
+
+/*HIDE ALL COLUMN HEADERS EXCEPT CONTACT NAME*/
+/*email icon column*/
+table.mobileContainerDiv th:first-of-type {
+	display: none;
+}
+
+/*contact department column*/
+table.mobileContainerDiv th:nth-of-type(3) {
+	display: none;
+}
+
+/*contact phone column*/
+table.mobileContainerDiv th:nth-of-type(4) {
+	display: none;
+}
+
+/*dropdown column*/
+table.mobileContainerDiv th:nth-of-type(5) {
+	display: none;
+}
+
+/*USE GRID DISPLAY AND GRID TEMPLATE AREAS TO FORMAT COLLAPSED TABLE*/
+table.mobileContainerDiv tr {
+	display: grid;
+	grid-template-rows: min-content auto;
+	grid-template-columns: .5fr 2fr .5fr;
+	grid-template-areas:
+		"a b b b e"
+		"a c c c e"
+		"a d d d e";
+}
+
+/*icon column*/
+table.mobileContainerDiv td:first-of-type {
+	display: grid;
+	grid-area: a;
+	justify-content: center;
+	align-content: center;
+	border: bottom;
+}
+
+/*contact name column*/
+table.mobileContainerDiv td:nth-of-type(2) {
+	display: grid;
+	grid-area: b;
+	border: top;
+}
+
+/*contact department column*/
+table.mobileContainerDiv td:nth-of-type(3) {
+	display: grid;
+	grid-area: c;
+	color: gray;
+	border: none;
+}
+
+/*contact phone column*/
+table.mobileContainerDiv td:nth-of-type(4) {
+    display: grid;
+	grid-area: d;
+	border: none;
+}
+
+/*dropdown column*/
+table.mobileContainerDiv td:nth-of-type(5) {
+	display: grid;
+	grid-area: e;
+	justify-content: center;
+	align-content: center;
+	border: bottom;
+}

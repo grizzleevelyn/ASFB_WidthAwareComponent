@@ -1,0 +1,66 @@
+<template>
+    <table class={tableClass}>
+		<colgroup>
+			<col span="1" class="small-column">
+			<col span="1" class="large-column">
+			<col span="1" class="large-column">
+			<col span="1" class="large-column">
+			<col span="1" class="small-column">
+		</colgroup>
+		<thead>
+			<tr class="slds-line-height_reset">
+				<th scope="col">
+					<!-- FUNCTIONALITY FOR THIS COLUMN NOT DEFINED -->
+					<div class="slds-truncate slds-text-title_caps" title="Email Contact">&nbsp;</div>
+				</th>
+				<th scope="col">
+					<div class="slds-truncate slds-text-title_caps" title="Contact Name">
+						Contact Name
+					</div>
+				</th>
+				<th scope="col">
+					<div class="slds-truncate slds-text-title_caps" title="Contact Department">
+						Contact Department
+					</div>
+				</th>
+				<th scope="col">
+					<div class="slds-truncate slds-text-title_caps" title="Contact Phone">
+						Contact Phone
+					</div>
+				</th>
+				<th scope="col">
+					<!-- FUNCTIONALITY FOR THIS COLUMN NOT DEFINED -->
+					<div class="slds-truncate slds-text-title_caps" title="Dropdown">&nbsp;</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<template for:each={displayContacts} for:item="contact"> 
+				<tr key={contact.contactId}>
+					<td>
+						<!-- FUNCTIONALITY FOR THIS COLUMN NOT DEFINED -->
+                        <button class="slds-button slds-button_icon" title="Email Contact">
+                            <lightning-icon icon-name="utility:email" alternative-text="Email Contact" title="Email"></lightning-icon>
+					    </button>
+                    </td>
+					<td>
+						{contact.contactName}
+					</td>
+					<td>
+						{contact.contactDepartment}
+					</td>
+					<td>
+						{contact.contactPhone}
+					</td>
+					<td>
+						<!-- FUNCTIONALITY FOR THIS COLUMN NOT DEFINED -->
+						<lightning-button-menu variant="bare" icon-name="utility:chevrondown" menu-alignment="auto">
+							<lightning-menu-item value="Edit" label="Edit"></lightning-menu-item>
+							<lightning-menu-item value="Delete" label="Delete"></lightning-menu-item>
+						</lightning-button-menu>
+					</td>
+				</tr>
+			</template>
+		</tbody>
+	</table>
+</template>
