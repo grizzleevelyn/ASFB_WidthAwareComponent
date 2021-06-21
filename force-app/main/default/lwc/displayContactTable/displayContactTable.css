@@ -9,27 +9,27 @@ table td {
 
 /*HIDE ALL COLUMN HEADERS EXCEPT CONTACT NAME*/
 /*email icon column*/
-table.mobileContainerDiv th:first-of-type {
+.mobileContainerDiv th:first-of-type {
 	display: none;
 }
 
 /*contact department column*/
-table.mobileContainerDiv th:nth-of-type(3) {
+.mobileContainerDiv th:nth-of-type(3) {
 	display: none;
 }
 
 /*contact phone column*/
-table.mobileContainerDiv th:nth-of-type(4) {
+.mobileContainerDiv th:nth-of-type(4) {
 	display: none;
 }
 
 /*dropdown column*/
-table.mobileContainerDiv th:nth-of-type(5) {
+.mobileContainerDiv th:nth-of-type(5) {
 	display: none;
 }
 
 /*USE GRID DISPLAY AND GRID TEMPLATE AREAS TO FORMAT COLLAPSED TABLE*/
-table.mobileContainerDiv tr {
+.mobileContainerDiv tr {
 	display: grid;
 	grid-template-rows: min-content auto;
 	grid-template-columns: .5fr 2fr .5fr;
@@ -40,7 +40,7 @@ table.mobileContainerDiv tr {
 }
 
 /*icon column*/
-table.mobileContainerDiv td:first-of-type {
+.mobileContainerDiv td:first-of-type {
 	display: grid;
 	grid-area: a;
 	justify-content: center;
@@ -49,14 +49,14 @@ table.mobileContainerDiv td:first-of-type {
 }
 
 /*contact name column*/
-table.mobileContainerDiv td:nth-of-type(2) {
+.mobileContainerDiv td:nth-of-type(2) {
 	display: grid;
 	grid-area: b;
 	border: top;
 }
 
 /*contact department column*/
-table.mobileContainerDiv td:nth-of-type(3) {
+.mobileContainerDiv td:nth-of-type(3) {
 	display: grid;
 	grid-area: c;
 	color: gray;
@@ -64,14 +64,14 @@ table.mobileContainerDiv td:nth-of-type(3) {
 }
 
 /*contact phone column*/
-table.mobileContainerDiv td:nth-of-type(4) {
+.mobileContainerDiv td:nth-of-type(4) {
     display: grid;
 	grid-area: d;
 	border: none;
 }
 
 /*dropdown column*/
-table.mobileContainerDiv td:nth-of-type(5) {
+.mobileContainerDiv td:nth-of-type(5) {
 	display: grid;
 	grid-area: e;
 	justify-content: center;
